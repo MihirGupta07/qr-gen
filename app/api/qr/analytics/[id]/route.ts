@@ -48,7 +48,7 @@ export async function GET(
       data: {
         id: qrCode._id,
         shortCode: qrCode.shortCode,
-        shortUrl: `${baseUrl}/api/scan/${qrCode.shortCode}`,
+        shortUrl: `${baseUrl}/${qrCode.shortCode}`,
         originalUrl: qrCode.originalUrl,
         qrImage: qrCode.qrImageData,
         scanCount: qrCode.scanCount,

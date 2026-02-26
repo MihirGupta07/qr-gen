@@ -26,7 +26,7 @@ export async function GET(request: NextRequest) {
     const formattedQRCodes = qrCodes.map((qr) => ({
       id: qr._id,
       shortCode: qr.shortCode,
-      shortUrl: `${baseUrl}/api/scan/${qr.shortCode}`,
+      shortUrl: `${baseUrl}/${qr.shortCode}`,
       originalUrl: qr.originalUrl,
       scanCount: qr.scanCount,
       createdAt: qr.createdAt,

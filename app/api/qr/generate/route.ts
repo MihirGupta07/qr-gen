@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
 
     // Create the scan URL
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-    const scanUrl = `${baseUrl}/api/scan/${shortCode}`;
+    const scanUrl = `${baseUrl}/${shortCode}`;
 
     // Generate QR code image
     const qrImageData = await generateQRCode(scanUrl, { format: format as 'png' | 'svg' });
